@@ -1,0 +1,104 @@
+
+.main{
+   
+    text-align: center;
+    background-color: lavender;   
+}
+.department-online h4{
+  background-color:darkblue;
+  color:white;
+
+}
+.department-online label{
+  width: 150px;
+  display:inline-block;
+}
+.department-online select{
+  width: 325px;
+  margin-right: 35px;
+}
+.main h1{
+color:darkblue;
+font-weight: 900;
+text-decoration-line: underline;
+}
+.form-control{
+  background-color: lavender;
+}
+.about-patient h4{
+  background-color: darkblue;
+  color:white;
+}
+.about-patient select,.about-patient input{
+ 
+  width: 325px;
+  
+}
+.about-patient label{
+  width: 100px;
+  display: inline-block;
+  margin-top: 20px;
+  
+}
+
+
+/* ------------------------address-details--------------------- */
+
+.address h4{
+  background-color: darkblue;
+  color:white;
+}
+.address select,input{
+ width: 325px;
+ 
+}
+.address label{
+  width: 100px;
+  display:inline-block;
+  margin-top: 20px;
+}
+@media(max-width:768px){
+
+  .department-online h4{
+  font-size: 15px;
+
+
+  }
+  .department-online label{
+    width: 250px;
+    font-size: 12px;
+   
+  }
+  .department-online select{
+  width: 225px;
+  margin-left: 30px;
+  }
+  .main h1{
+  font-size: 20px;
+  }
+
+  .about-patient h4{
+  font-size: 15px;
+
+  }
+  .about-patient select, .about-patient input{
+  width:225px;
+  }
+
+  .about-patient label{
+  font-size: 12px;
+
+  }
+
+
+
+/* ------------------------address-details--------------------- */
+
+  .address h4{
+  font-size: 15px;
+  }
+  .address select,input{
+  width: 225px;
+
+  }
+}

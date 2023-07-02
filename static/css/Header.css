@@ -1,0 +1,83 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap);
+*{
+    font-family:'Poppins', sans-serif;
+    
+} 
+.Navbar_up{
+    background-color:#89CFF0;
+    color:white;
+    height:100px; 
+}
+.Tim{
+    padding:10px;
+    justify-content: space-between;
+    text-decoration: none;
+    font-size:xx-large;
+    font-weight:1000;
+    display:block;
+}
+#braun{
+    color:darkblue;
+}
+#trainer{
+position:absolute;
+color:white;
+width: 40px;
+height: 40px;
+margin-top: -10px;
+}
+#trainer img{
+    height:100%;
+    width: 100%;
+}
+.services{
+    position:absolute;
+    right:17px;
+    top:60px;
+   
+}
+.services p{
+    display:inline;
+    flex-direction: row;
+    
+}
+.services p a{
+    color:white;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: small;
+    padding:17px;
+    
+}
+.services p a:hover{
+    color:goldenrod;
+}
+
+@media(max-width:768px){
+    .Navbar_up{  
+        height:45px; 
+    }
+    .Tim{
+        padding:4px;
+        font-size:15px; 
+    }
+    #trainer{
+    width: 15px;
+    height: 15px;
+    margin-top: -5px;
+    }
+  
+    .services{
+        position:absolute;
+        right:30px;
+        top:20px;
+       
+    }
+ 
+    .services p a{
+        font-size: 5px;
+        padding:3px;
+        
+    }
+      
+}

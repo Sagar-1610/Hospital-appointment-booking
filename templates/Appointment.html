@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/appointment.css">
+    <title>appointement</title>
+</head>
+<body>
+    <div class="container-fluid main">
+        <h1>MEDIMAX INSTITUTE FOR MEDICAL SCIENCE</h1>
+        <br>
+        <br>
+        <br>
+        <div class="alert alert-success">
+            {{n}}
+        </div>
+        <div class="form-control">
+            <form method="post">
+                {% csrf_token %}
+                <div class="department-online">
+                    <h4>ONLINE REGISTRATION PROCESS</h4>
+                   <br>
+                   <label>Visiting Department</label>
+                   <select name="department" id="department" required>
+                       <option value=""></option>
+                       <option value="ORTHOPAEDICS">ORTHOPAEDICS</option>
+                       <option value="UROLOGY">UROLOGY</option>
+                       <option value="PLASTIC SURGERY">PLASTIC SURGERY</option>
+                       <option value="GYNAECOLOGY">GYNAECOLOGY</option>
+                       <option value="GENERAL SURGERY">GENERAL SURGERY</option>
+                       <option value="INTERNAL MEDICINE">INTERNAL MEDICINE</option>
+                       <option value="PAEDIATRIC ORTHOPAEDICS">PAEDIATRIC ORTHOPAEDICS</option>
+                       <option value="PAEDIATRIC MEDICINE">PAEDIATRIC MEDICINE</option>
+                       <option value="OPHTHALMOLOGY">OPHTHALMOLOGY(EYE)</option>
+                       <option value="ORAL HEALTH SCIENCE CENTRE(DENTAL)">ORAL HEALTH SCIENCES CENTRE(DENTAL)</option>
+                   </select>
+               </div>
+               <div class="about-patient">
+                   <br>
+                   <h4>PATIENT DETAILS</h4>
+                   <br>
+                   <label for="">Gender</label>
+                   <select name="gender" required>
+                       <option value=""></option>
+                       <option value="Male">Male</option>
+                       <option value="Female">Female</option>
+                       <option value="Transgender">Transgender</option>
+                       <option value="Ambiguous">Ambiguous</option>
+                   </select>
+                   <br>
+                   <label id="namela">Full name</label>
+                   <input type="text" name="name" placeholder="enter your name" required >
+                   <br>
+                   <label id="dobla">DOB</label>
+                   <input type="date" name="dob"  required>
+                   <br>
+                   <label id="nationalityla">Nationality</label>
+                   <select name="nationality" required>
+                       <option value=""></option>
+                       <option value="NEPALI"> NEPALI</option>
+                       <option value="INDIAN">INDIAN</option>
+                       <option value="AMERICAN">AMERICAN</option>
+                       <option value="BANGLADESHI">BANGLADESHI</option>
+                       <option value="SRI LANKAN">SRI LANKAN</option>
+                       <option value="PAKISTANI">PAKISTANI</option>
+                       <option value="AFGANI">AFGANI</option>
+                       <option value="GERMAN">GERMAN</option>
+                       <option value="BHUTANI">BHUTANI</option>
+                       <option value="CHINESE">CHINESE</option>
+                       <OPTION> OTHER</OPTION>
+                   </select>
+                   <br>
+                   <label id="aadharla">Aadhar no.</label>
+                   <input type="text" name="Aadhar"  placeholder="enter your 12 digit no." required>
+               </div>
+               <div class="address">
+                   <br>
+                   <h4>ADDRESS DETAILS</h4>
+                   <br>
+                   <br>
+                   <label for="">Country</label>
+                   <input type="text"  name="country" placeholder="enter your country" required>
+                   <br>
+                   <label id="statela">State</label>
+                   <input type="text"  name="state" placeholder="enter your state" required>
+                   <br>
+                   <label id="cityla">City/Village</label>
+                   <input type="text" name='city' placeholder="enter your location" required>
+                   <br>
+                   <label id="mobilela">Mobile No.</label>
+                   <input type="text" name='mobile' placeholder="enter 10 digit number" required>
+                   <br>
+                   <label id="emailla">Email</label>
+                   <input type="email" name="email" placeholder="enter your email" required>
+                   <br>
+                   <br>
+                    <div >
+                       <button  class ="btn btn-primary" type="submit">Submit now</button>
+                    </div>
+               </div>
+            </form>
+        </div> 
+    </div>    
+</body>
+</html>
+{% endblock  %}
