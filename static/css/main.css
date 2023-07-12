@@ -1,7 +1,5 @@
-.doctor{
-    
+.doctor{    
     height:500px;
- 
     background-image: url("/static/img/1.jpg");
     background-size: 100% 100%;
 }
@@ -23,36 +21,18 @@
 }
 @media(max-width:768px){
     .doctor{
-        height:250px;
-    }
-   
-    .btn{
-        position:absolute;
-        top:20%;
-        left:35%;
-   
-        
-    }
-    .btn a{
-       font-size: 6px;
-        padding:1px;
-    }    
-}
-
-@media(min-width:769px) and (max-width:1024px){
-    .doctor{
         height:500px;
     }
    
     .btn{
         position:absolute;
-        top:22%;
-        left:40%;
-   
-        
+        left:25%;   
     }
-    .btn a{
-       
-        padding:2px;
-    } 
+}
+@media(min-width:769px) and (max-width:1024px){
+    .doctor{
+        height:500px;
+    }
+
+    
 }

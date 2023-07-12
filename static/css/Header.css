@@ -6,7 +6,7 @@
 .Navbar_up{
     background-color:#89CFF0;
     color:white;
-    height:100px; 
+    height:110px; 
 }
 .Tim{
     padding:10px;
@@ -55,7 +55,7 @@ margin-top: -10px;
 
 @media(max-width:768px){
     .Navbar_up{  
-        height:45px; 
+        height:60px; 
     }
     .Tim{
         padding:4px;
