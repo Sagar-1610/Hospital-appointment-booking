@@ -24,13 +24,17 @@ def Appointment(request):
         en.save()
        
         x= random.randint(10,50)
-        n = "You have successfully booked Your appointment.Your appointment no. is {}".format(x)
-        send_mail(
-            subject='APPOINTMENT BOOKING',
-            message= 'Thank you for Visting us.Your appointment is booked.Your appointment number is {}'.format(x),
-            from_email='medimax252525@gmail.com',
-            recipient_list=[email],
-            fail_silently=False
-        )   
+        n = "You have successfully booked Your appointment.Your appointment no. is{}.further information please check your mail".format(x)
+
+        subject='APPOINTMENT BOOKING'
+        message= '''<p>Dear Mr.<b>{}</b>,<br>I would like to confirm your appointment with Thomas on Tomorrow, at 6:00 PM.Your appointment number is <b>{}</b> If you have any questions or want to request changes, please contact me.
+                    <br>Regards,
+                    <br>Edward.<br>+1245879631</p>'''.format(name,x)
+        from_email='medimax252525@gmail.com'
+        recipient_list=[email]
+        msg = EmailMultiAlternatives(subject,message,from_email,recipient_list,)
+        msg.content_subtype='html'
+        msg.send()   
+        fail_silently=False
     return render(request,"Appointment.html",{'n':n})
 

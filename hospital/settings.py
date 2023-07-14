@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
-import dotenv
+# import dotenv
 # import os
 # import django_heroku
 # import dj_database_url
@@ -22,18 +22,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
-dotenv_file = os.path.join(BASE_DIR, ".env")
-if os.path.isfile(dotenv_file):
-    dotenv.load_dotenv(dotenv_file)
+# dotenv_file = os.path.join(BASE_DIR, ".env")
+# if os.path.isfile(dotenv_file):
+#     dotenv.load_dotenv(dotenv_file)
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = 'django-insecure-)g#=4cdf3)ql^ks0qz6ghd#uc=*+0rc)7mmkr5u66^-lzxg$ey'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['.vercel.app','.now.sh', '127.0.0.1','localhost']
+ALLOWED_HOSTS = ['.vercel.app','.now.sh',]
 
 
 # Application definition
@@ -90,12 +90,12 @@ WSGI_APPLICATION = 'hospital.wsgi.application'
 # }
 DATABASES={
    'default':{
-      'ENGINE':os.environ['ENGINE'],
-      'NAME':os.environ['NAME'],
-      'USER':os.environ['USER'],
-      'PASSWORD':os.environ['PASSWORD'],
-      'HOST':os.environ['HOST'],
-      'PORT':os.environ['PORT'],
+      'ENGINE':'django.db.backends.postgresql_psycopg2',
+      'NAME':'postgres',
+      'USER':'postgres',
+      'PASSWORD':'Sagar@969096',
+      'HOST':'db.gpodyfaaxdpimcptwvfq.supabase.co',
+      'PORT':'5432',
    }
 }
 
